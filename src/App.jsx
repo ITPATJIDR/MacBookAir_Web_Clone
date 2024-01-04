@@ -9,13 +9,13 @@ function App() {
           className="w-[20vw] h-[5vh] font-bold mt-5 text-[20px] flex items-center justify-center hover:bg-black transition-all rounded-2xl"
           to="/basic"
         >
-          Basic
+          Zoom Text 
         </NavLink>
         <NavLink
           className="w-[20vw] h-[5vh] font-bold mt-5 text-[20px] flex items-center justify-center hover:bg-black transition-all rounded-2xl"
-          to="/basic"
+          to="/playVideo"
         >
-          Basic
+          Play Video by scroll
         </NavLink>
         <NavLink
           className="w-[20vw] h-[5vh] font-bold mt-5 text-[20px] flex items-center justify-center hover:bg-black transition-all rounded-2xl"

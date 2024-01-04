@@ -12,7 +12,6 @@ const Basic = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.set(".macbookText", { scale: 0.01 });
-    gsap.set(".macbookVideo", { currentTime: 0 });
 
     gsap.to(".macbookText", {
       scrollTrigger: {
@@ -30,17 +29,24 @@ const Basic = () => {
       },
     });
 
-    gsap.to(".macbookVideo", {
-      scrollTrigger: {
-        trigger: ".macbookVideo",
-        pin: true,
-        start: "top center",
-        end: "-=100",
-        scrub: true,
-      }, 
-      currentTime: 4,
-      duration: 10
-    })
+	var tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: timeVideo.current,
+			start: "top center",
+			end: "bottom center",
+			scrub: true,
+		}
+	})
+
+	tl.from(timeVideo.current, {
+		currentTime:0,
+		duration: 10
+	})
+	.to(timeVideo.current, {
+		currentTime:4,
+		duration:10
+	})
+
   }, []);
 
 
@@ -53,9 +59,9 @@ const Basic = () => {
           alt="MacBook"
         />
         {visible ? (
-          <video ref={timeVideo} className="macbookVideo object-fill" width="full" height="full" controls={false}>
-            <source src={macbook} type="video/mp4" />
-          </video>
+            <video ref={timeVideo} className="macbookVideo object-fill" controls={false}>
+              <source src={macbook} type="video/mp4" />
+            </video>
         ) : null}
       </div>
     </div>
