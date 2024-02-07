@@ -19,9 +19,9 @@ function App() {
         </NavLink>
         <NavLink
           className="w-[20vw] h-[5vh] font-bold mt-5 text-[20px] flex items-center justify-center hover:bg-black transition-all rounded-2xl"
-          to="/basic"
+          to="/timeline"
         >
-          Basic
+          TimeLine 
         </NavLink>
         <NavLink
           className="w-[20vw] h-[5vh] font-bold mt-5 text-[20px] flex items-center justify-center hover:bg-black transition-all rounded-2xl"

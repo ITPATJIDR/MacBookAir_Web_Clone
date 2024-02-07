@@ -12,9 +12,11 @@ const PlayVideo = () => {
 	var tl = gsap.timeline({
 		scrollTrigger: {
 			trigger: timeVideo.current,
-			start: "top center",
-			end: "bottom center",
+			start: "+=100",
+			end: "+=2000",
 			scrub: true,
+			pin:true,
+			markers:true
 		}
 	})
 
@@ -23,7 +25,7 @@ const PlayVideo = () => {
 		duration: 10
 	})
 	.to(timeVideo.current, {
-		currentTime:4,
+		currentTime:5,
 		duration:10
 	})
 	
@@ -43,7 +45,7 @@ const PlayVideo = () => {
   },[])
 
   return (
-    <div className="h-[300vh]">
+    <div className="h-[400vh]">
       <div className="flex items-center justify-center h-[150vh]">
         <video
           ref={timeVideo}

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Basic from "./pages/basic.jsx"
 import PlayVideo from './pages/playVideo.jsx'
+import TimeLine from './pages/timelind.jsx'
 import "./css/index.css"
 import {
   createBrowserRouter,
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/playVideo",
     element: <PlayVideo/>
+  },
+  {
+    path: "/timeline",
+    element: <TimeLine/>
   }
 
 ]);
